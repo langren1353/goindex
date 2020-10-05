@@ -416,6 +416,7 @@ $(function(){
     $("body").on("click",'.folder',function(){
         var url = $(this).attr('href');
         history.pushState(null, null, url);
+	if(url === '/') return true;
         render(url);
         return false;
     });
@@ -423,6 +424,7 @@ $(function(){
     $("body").on("click",'.view',function(){
         var url = $(this).attr('href');
         history.pushState(null, null, url);
+	if(url === '/') return true;
         render(url);
         return false;
     });
